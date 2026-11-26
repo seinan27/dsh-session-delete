@@ -1,0 +1,59 @@
+{
+  "name": "dsh-session-delete",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "A real DELETE button for every Session row. The default moves the session into the Windows Recycle Bin; \"permanent\" destroys the directory and sweeps every other reference to that session id out of DSH's own files.",
+  "license": "MIT",
+  "author": "seinan27",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./client/index.js",
+    "./cordis.patch.yml": "./cordis.patch.yml"
+  },
+  "files": [
+    "lib",
+    "client",
+    "cordis.patch.yml",
+    "README.md",
+    "README.中文.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/seinan27/dsh-session-delete.git"
+  },
+  "homepage": "https://github.com/seinan27/dsh-session-delete#readme",
+  "bugs": {
+    "url": "https://github.com/seinan27/dsh-session-delete/issues"
+  },
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "dsh-plugin",
+    "session",
+    "delete",
+    "recycle-bin"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/dsh": ">=0.2.0-rc.1 <0.3.0"
+  },
+  "scripts": {
+    "test": "node test/basic.mjs",
+    "check": "node --check lib/index.js && node --check client/index.js"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-workspace"
+      ]
+    }
+  }
+}

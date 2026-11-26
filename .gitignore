@@ -1,0 +1,5 @@
+node_modules/
+*.log
+test/.tmp-home/
+.DS_Store
+*.bak*

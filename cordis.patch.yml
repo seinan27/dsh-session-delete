@@ -1,0 +1,9 @@
+# dsh-session-delete bundle patch -- ONE additive insert row, nothing else.
+#
+# Only additive rows appear here on purpose: a patch replaces the targeted row's whole `config`, so
+# touching a shipped row would break upstream upgrades. The host half needs the web server (to carry the
+# delete request) and the storage domain (to remove the row from the registry through its live handle),
+# so a headless profile simply does not load this bundle.
+- insert:
+    - id: session-delete
+      name: 'dsh-session-delete'
