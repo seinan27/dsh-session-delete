@@ -2,7 +2,7 @@
   "name": "dsh-session-delete",
   "version": "1.0.0",
   "type": "module",
-  "description": "A real DELETE button for every Session row. The default moves the session into the Windows Recycle Bin; \"permanent\" destroys the directory and sweeps every other reference to that session id out of DSH's own files.",
+  "description": "会话删除 — A real DELETE button for every Session row: the default moves it into the Windows Recycle Bin, \"permanent\" destroys the directory and sweeps every other reference to that session id.",
   "license": "MIT",
   "author": "seinan27",
   "exports": {
